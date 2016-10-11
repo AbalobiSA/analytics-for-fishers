@@ -48,16 +48,16 @@
     /* This method will render a list of users from current salesforce org */
     var showUsersList = function(forceClient) {
 
-        fetchRecords(forceClient, function(data) {
-            var users = data.records;
-
-            var listItemsHtml = '';
-            for (var i=0; i < users.length; i++) {
-                listItemsHtml += ('<li class="table-view-cell"><div class="media-body">' + users[i].Name + '</div></li>');
-            }
-
-            document.querySelector('#users').innerHTML = listItemsHtml;
-        })
+        // fetchRecords(forceClient, function(data) {
+        //     var users = data.records;
+        //
+        //     var listItemsHtml = '';
+        //     for (var i=0; i < users.length; i++) {
+        //         listItemsHtml += ('<li class="table-view-cell"><div class="media-body">' + users[i].Name + '</div></li>');
+        //     }
+        //
+        //     document.querySelector('#users').innerHTML = listItemsHtml;
+        // })
     }
 
     /* This method will trigger our custom query */
