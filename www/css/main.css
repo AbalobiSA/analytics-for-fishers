@@ -8,12 +8,6 @@
   width: 100%;
 }
 .app-content{
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   position: relative;
-}
-.footer-overlay{
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
 }
