@@ -15,7 +15,7 @@
 
     /* Wait until cordova is ready to initiate the use of cordova plugins and app launch */
     document.addEventListener("deviceready", function() {
-        authenticateUser(showUsersList);
+        authenticateUser(showFishingInfo);
     }, false);
 
     /* Method to authenticate user with Salesforce Mobile SDK's OAuth Plugin */
@@ -63,12 +63,16 @@
     /* This method will trigger our custom query */
     var showFishingInfo = function(forceClient) {
 
-        fetchRecords(forceClient, function(data) {
-            var users = data.records;
+        customQuery(forceClient, function(data) {
+            var results = data.records;
 
             var listItemsHtml = '';
-            for (var i=0; i < users.length; i++) {
-                listItemsHtml += ('<li class="table-view-cell"><div class="media-body">' + users[i].Name + '</div></li>');
+            for (var i=0; i < (results.length/3); i++) {
+                listItemsHtml += (
+                  '<li class="table-view-cell"><div class="media-body">' + results[i].main_fisher_id__c + '</div></li>'
+                  + '<li class="table-view-cell"><div class="media-body">' + results[i].trip_date__c + '</div></li>'
+                  + '<li class="table-view-cell"><div class="media-body">' + results[i].landing_site__c + '</div></li>'
+                );
             }
 
             document.querySelector('#users').innerHTML = listItemsHtml;
