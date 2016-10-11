@@ -69,7 +69,8 @@
             var listItemsHtml = '';
             for (var i=0; i < (results.length/3); i++) {
                 listItemsHtml += (
-                  '<li class="table-view-cell"><div class="media-body">' + results[i].main_fisher_id__c + '</div></li>'
+                  '<li class="table-view-divider">Item: ' + (i+1) + '</li>'
+                  + '<li class="table-view-cell"><div class="media-body">' + results[i].main_fisher_id__c + '</div></li>'
                   + '<li class="table-view-cell"><div class="media-body">' + results[i].trip_date__c + '</div></li>'
                   + '<li class="table-view-cell"><div class="media-body">' + results[i].landing_site__c + '</div></li>'
                 );

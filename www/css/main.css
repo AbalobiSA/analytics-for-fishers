@@ -1,3 +1,19 @@
-.card{
+.sf-cheeseburger{
+  margin-right: 5px;
+}
+.centered-header{
+  text-align: center;
+}
+.full-width{
+  width: 100%;
+}
+.app-content{
   margin-top: 50px;
+  position: relative;
+}
+.footer-overlay{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
