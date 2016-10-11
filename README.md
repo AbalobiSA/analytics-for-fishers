@@ -32,3 +32,11 @@ Navigate into your project directory, then do:
 ### Building
 You'll need to import the project into Android Studio. More on this can be
 found at the [Salesforce Getting Started Guide](https://trailhead.salesforce.com/mobile_sdk_hybrid/mobilesdk_hybrid_getting_started).
+
+### Important Notes
+When you run cordova prepare after making some changes and you want to build on android, first go to:
+
+     ../abalobi-analytics-for-fishers/platforms/android/AndroidManifest.xml
+
+You'll need to delete the second ``<activity>..</activity>`` tag there to be able to
+build in android studio, for some reason.
