@@ -67,7 +67,7 @@
             var results = data.records;
 
             var listItemsHtml = '';
-            for (var i=0; i < (results.length/3); i++) {
+            for (var i=0; i < (results.length); i++) {
                 listItemsHtml += (
                   '<li class="table-view-divider">Item: ' + (i+1) + '</li>'
                   + '<li class="table-view-cell"><div class="media-body">Main ID:&nbsp;<p>' + results[i].main_fisher_id__c + '</p></div></li>'
