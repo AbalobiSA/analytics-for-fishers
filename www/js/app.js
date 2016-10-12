@@ -1,3 +1,6 @@
+var forceClient;
+
+
 (function () {
 
     "use strict";
@@ -15,6 +18,7 @@
 
     /* Wait until cordova is ready to initiate the use of cordova plugins and app launch */
     document.addEventListener("deviceready", function() {
+        regLinkClickHandlers();
         authenticateUser(showFishingInfo);
     }, false);
 
@@ -29,7 +33,7 @@
             // Callback method when authentication succeeds.
             function (creds) {
                 // Create forcetk client instance for rest API calls
-                var forceClient = new forcetk.Client(creds.clientId, creds.loginUrl);
+                forceClient = new forcetk.Client(creds.clientId, creds.loginUrl);
                 forceClient.setSessionToken(creds.accessToken, "v36.0", creds.instanceUrl);
                 forceClient.setRefreshToken(creds.refreshToken);
 
@@ -62,6 +66,8 @@
 
     /* This method will trigger our custom query */
     var showFishingInfo = function(forceClient) {
+
+
 
         customQuery(forceClient, function(data) {
             var results = data.records;
