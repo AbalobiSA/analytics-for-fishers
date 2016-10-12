@@ -1,3 +1,37 @@
+var app = angular.module('demoApp', ["ngRoute"]);
+
+app.controller('SimpleController', function ($scope) {
+  $scope.customers = [
+    { name: 'John Smith', city: "Phoenix" }
+  ]
+})
+
+
+app.config(function ($routeProvider) {
+    $routeProvider
+      .when('/',
+        {
+          controller: 'SimpleController',
+          templateUrl:'views/page1.html'
+        })
+      .when('/partial1',
+        {
+          controller: 'SimpleController',
+          templateUrl:'views/page1.html'
+        })
+      .when('/partial2',
+        {
+          controller: 'SimpleController',
+          templateUrl:'views/page2.html'
+        })
+      .otherwise({ redirectTo: '/' });
+
+});
+
+
+
+
+
 (function () {
 
     "use strict";
@@ -16,6 +50,7 @@
     /* Wait until cordova is ready to initiate the use of cordova plugins and app launch */
     document.addEventListener("deviceready", function() {
         authenticateUser(showFishingInfo);
+
     }, false);
 
     /* Method to authenticate user with Salesforce Mobile SDK's OAuth Plugin */
