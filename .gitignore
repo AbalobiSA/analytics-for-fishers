@@ -2,3 +2,4 @@ hooks/
 platforms/
 plugins/
 www/bootconfig.json
+node_modules/

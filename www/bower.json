@@ -1,0 +1,21 @@
+{
+  "name": "abalobi-analytics-for-fishers",
+  "homepage": "https://github.com/AbalobiSA/analytics-for-fishers",
+  "authors": [
+    "carl@techairos.com"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8"
+  }
+}
